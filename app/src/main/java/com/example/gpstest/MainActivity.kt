@@ -70,13 +70,14 @@ class MainActivity : AppCompatActivity() {
                 // If location is available, extract latitude and longitude
                 val lat = location.latitude
                 val lon = location.longitude
+                val tim = location.time
 
                 // Display location in the TextView
-                locationText.text = "Latitude: $lat\nLongitude: $lon"
+                locationText.text = "Latitude: $lat\nLongitude: $lon\nTime: $tim"
 
                 val phoneNumber = phonenumber?.text.toString()
                 val smsManager:SmsManager = SmsManager.getDefault()
-                smsManager.sendTextMessage(phoneNumber, null, "Latitude: $lat\nLongitude: $lon", null, null)
+                smsManager.sendTextMessage(phoneNumber, null, "Latitude: $lat\nLongitude: $lon\nTime: $tim", null, null)
 
             } else {
                 // If location is null, display an error message
