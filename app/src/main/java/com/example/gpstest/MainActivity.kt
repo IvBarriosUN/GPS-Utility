@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity(), LocationListener {
         setupClickListeners()
 
         // Valores por defecto para testing
-        etServerIP.setText("192.168.1.100") // Cambia por tu IP
+        etServerIP.setText("190.84.119.88") // Cambia por tu IP
         etTcpPort.setText("8080")
         etUdpPort.setText("8081")
     }
